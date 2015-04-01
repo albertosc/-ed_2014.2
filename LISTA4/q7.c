@@ -11,15 +11,7 @@ int main(void){
 
     float v[3]={0,0,0}, aux;
     printf("Alocando memoria inicial\n");
-
-
-
-
-
-
-
-
-
+    
     p=(st*)calloc(3,sizeof(st));
     for(i = 0 ; i < 3 ; i++){
             printf("Filial  (1=SP / 2=RJ /3=BH):\n",i+1);
@@ -45,12 +37,10 @@ int main(void){
                         }
             }
 
-
-
-            printf("Quantidade de funcionarios:\n");
-            scanf("%d",&p->qtdefunc);
-            printf("Faturamento da filial:\n");
-            scanf("%f",&p->faturtot);
+            printf("Quantidade de funcionarios:\n"); // imprime a quantidade de func
+            scanf("%d",&p->qtdefunc); // lê a função qtadde func
+            printf("Faturamento da filial:\n"); //printa o faturamento da familia filial
+            scanf("%f",&p->faturtot); // lê o faturamento total
             v[i]=(p->faturtot)/(p->qtdefunc);
             p = p + 1;
     }
@@ -67,8 +57,6 @@ int main(void){
                 v2[i+1] = x;
             }
 
-
-
     }
     for(i=0;i<2;i++){
             if(v[i]>v[i+1]){
@@ -79,8 +67,6 @@ int main(void){
                 v2[i]=v2[i+1];
                 v2[i+1]=x;
             }
-
-
 
     }
 
